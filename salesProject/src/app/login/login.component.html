@@ -1,4 +1,15 @@
+<mat-toolbar color="primary">
+    <span><img src="https://media.istockphoto.com/id/1345389715/vector/abstract-black-scorpio.jpg?s=612x612&w=0&k=20&c=WqUxGMnxukfklsKvEzJvOCe916YdUrlFXavmkgUdfdk=" width="40px"> </span>
+    <span class="note">WELCOME TO SALES &amp; DISTRIBUTION APPLICATION</span>
+    <span class="example-spacer"></span>
+    <span>{{currentDate | date:'yyyy-MM-dd'}}</span>
+    
+    <button  mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
 <form>
+<<<<<<< HEAD
     <mat-toolbar color="primary">
         <span><img src="https://media.istockphoto.com/id/1345389715/vector/abstract-black-scorpio.jpg?s=612x612&w=0&k=20&c=WqUxGMnxukfklsKvEzJvOCe916YdUrlFXavmkgUdfdk=" width="40px"> </span>
         <span>{{currentDate | date:'yyyy-MM-dd'}}</span>
@@ -23,3 +34,13 @@
         </div>
     </form>
 </div>
+=======
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Distributor</button>
+        <button mat-menu-item>Authorizer</button>
+        <button mat-menu-item>Warehouse</button>
+        <button mat-menu-item>Admin</button>
+    </mat-menu>
+</form>
+
+>>>>>>> 0784041b5a245a4548b1a068eb623e2142c46fa9
