@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   currentDate=new Date();
+  changing:string="Select The User Type";
+  constructor(){
+  
+  }
 }
