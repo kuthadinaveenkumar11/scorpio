@@ -8,9 +8,9 @@
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
-<form>
+<form [formGroup]="loginform">
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="Distributor()">Distributor</button>
+        <button mat-menu-item (click)="Distributor()" formControlName="dis">Distributor</button>
         <button mat-menu-item (click)="Authorizer()">Authorizer</button>
         <button mat-menu-item (click)="Warehouse()">Warehouse</button>
         <button mat-menu-item (click)="Admin()">Admin</button>
@@ -18,11 +18,11 @@
     <div class="login_page">
         <mat-form-field class="example-full-width">
             <mat-label>Email*</mat-label>
-            <input type="email" matInput placeholder="{{changing}}">
+            <input type="email" matInput placeholder="{{changing}}" formControlName="Uname">
         </mat-form-field><br>
         <mat-form-field class="example-full-width">
             <mat-label>PassWord*</mat-label>
-            <input type="password" matInput placeholder="{{passwordchanging}}">
+            <input type="password" matInput placeholder="{{passwordchanging}}"  formControlName="Pssword">
         </mat-form-field><br>
         <button mat-raised-button color="primary"   (click)="onClick()">Login</button>&nbsp;
         <a href="#">Forget Password</a>
