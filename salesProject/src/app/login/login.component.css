@@ -1,6 +1,15 @@
 .example-spacer {
     flex: 1 1 auto;
+<<<<<<< HEAD
+}
+
+.mainpage {
+    margin: 10%;
+    text-align: center;
+}
+=======
   }
   .note{
     margin-left: 30%;
   }
+>>>>>>> 0784041b5a245a4548b1a068eb623e2142c46fa9

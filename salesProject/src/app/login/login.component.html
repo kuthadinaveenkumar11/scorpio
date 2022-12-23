@@ -9,11 +9,42 @@
   </button>
 </mat-toolbar>
 <form>
+<<<<<<< HEAD
+    <mat-toolbar color="primary">
+        <span><img src="https://media.istockphoto.com/id/1345389715/vector/abstract-black-scorpio.jpg?s=612x612&w=0&k=20&c=WqUxGMnxukfklsKvEzJvOCe916YdUrlFXavmkgUdfdk=" width="40px"> </span>
+        <span>{{currentDate | date:'yyyy-MM-dd'}}</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+</form>
+<div>
+    <form [formGroup]="loginform" (ngSubmit)="onClick()">
+        <div class="mainpage">
+            <label>Username:</label>&nbsp;&nbsp;&nbsp;
+
+            <input type="text" placeholder="Username" formControlName="Uname"><br><br>
+            <label>Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Password" formControlName="Pssword"><br><br>
+            <!-- <input type="checkbox">&nbsp;<label>Remember me</label>&nbsp;&nbsp; -->
+            <Button>Login</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">Forgot Password</a><br><br>
+            <!-- <Button>Login</Button>&nbsp;&nbsp; -->
+        </div>
+    </form>
+</div>
+=======
     <mat-menu #menu="matMenu">
         <button mat-menu-item>Distributor</button>
         <button mat-menu-item>Authorizer</button>
         <button mat-menu-item>Warehouse</button>
         <button mat-menu-item>Admin</button>
     </mat-menu>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email*</mat-label>
+        <input type="email" matInput placeholder="{{changing}}">
+    </mat-form-field>
 </form>
 
+>>>>>>> 0784041b5a245a4548b1a068eb623e2142c46fa9
