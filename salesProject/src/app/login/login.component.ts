@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,4 +13,18 @@ export class LoginComponent {
     Uname:new FormControl('naveen11'),
     Pssword:new FormControl('12345')
   })
+  constructor(private routee:Router) { }
+
+  ngOnInit(): void {
+  }
+  onClick(){
+    if(this.loginform.value.Uname=='naveen11'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['table']);
+    }
+    else{
+      console.log(this.loginform.value);
+    alert("enter crt");
+    }
+  }
 }
