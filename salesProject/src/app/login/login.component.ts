@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   currentDate=new Date();
   changing:string="";
+  passwordchanging:string="";
   loginform=new FormGroup({
     Uname:new FormControl('naveen11'),
     Pssword:new FormControl('12345')
