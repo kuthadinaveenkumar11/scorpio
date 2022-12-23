@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,ReactiveFormsModule
     
   ],
   providers: [],
