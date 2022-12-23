@@ -10,10 +10,10 @@
 </mat-toolbar>
 <form>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>Distributor</button>
-        <button mat-menu-item>Authorizer</button>
-        <button mat-menu-item>Warehouse</button>
-        <button mat-menu-item>Admin</button>
+        <button mat-menu-item (click)="Distributor()">Distributor</button>
+        <button mat-menu-item (click)="Authorizer()">Authorizer</button>
+        <button mat-menu-item (click)="Warehouse()">Warehouse</button>
+        <button mat-menu-item (click)="Admin()">Admin</button>
     </mat-menu>
     <div class="login_page">
         <mat-form-field class="example-full-width">
@@ -23,7 +23,8 @@
         <mat-form-field class="example-full-width">
             <mat-label>PassWord*</mat-label>
             <input type="password" matInput placeholder="{{passwordchanging}}">
-        </mat-form-field>
+        </mat-form-field><br>
+        <button mat-raised-button color="primary"   (click)="onClick()">Login</button>&nbsp;
+        <a href="#">Forget Password</a>
     </div>
-
 </form>

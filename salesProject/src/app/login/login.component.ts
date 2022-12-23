@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   currentDate=new Date();
-  changing:string="";
-  passwordchanging:string="";
+  changing:string="Select The User Type";
+  passwordchanging:string="Select The User Type";
   loginform=new FormGroup({
     Uname:new FormControl('naveen11'),
     Pssword:new FormControl('12345')
@@ -29,7 +29,15 @@ export class LoginComponent {
     alert("enter crt");
     }
   }
+  Distributor(){
+      this.changing="Enter the Distributor Mail";
+      this.passwordchanging="Enter the Distributor Password";
+  }
+  Authorizer(){
 
+  }
+  Warehouse(){}
+  Admin(){}
   
 }
   
