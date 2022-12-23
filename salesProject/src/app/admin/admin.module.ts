@@ -6,7 +6,6 @@ import { AdminComponent } from './admin.component';
 import { ListDistributorsComponent } from './list-distributors/list-distributors.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { StockInWareHouseComponent } from './stock-in-ware-house/stock-in-ware-house.component';
-import { SatusComponent } from './satus/satus.component';
 import { StatusComponent } from './status/status.component';
 import { ProcessedPurchaseorderFromWarehouseComponent } from './processed-purchaseorder-from-warehouse/processed-purchaseorder-from-warehouse.component';
 import { TotalSalesEodComponent } from './total-sales-eod/total-sales-eod.component';
@@ -19,7 +18,6 @@ import { ViewAndEditProductCatalogAndPriceComponent } from './view-and-edit-prod
     ListDistributorsComponent,
     ListEmployeeComponent,
     StockInWareHouseComponent,
-    SatusComponent,
     StatusComponent,
     ProcessedPurchaseorderFromWarehouseComponent,
     TotalSalesEodComponent,
