@@ -9,11 +9,11 @@ import { LoginComponent } from './login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
-=======
 import {MatMenuModule} from '@angular/material/menu';
->>>>>>> 0784041b5a245a4548b1a068eb623e2142c46fa9
+
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +23,9 @@ import {MatMenuModule} from '@angular/material/menu';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,ReactiveFormsModule
-=======
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule
->>>>>>> 0784041b5a245a4548b1a068eb623e2142c46fa9
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,ReactiveFormsModule,
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule
     
   ],
   providers: [],

@@ -27,4 +27,9 @@ export class LoginComponent {
     alert("enter crt");
     }
   }
+
+  
 }
+  
+
+
