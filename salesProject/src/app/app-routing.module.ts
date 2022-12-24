@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'Admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'Warehouse', loadChildren: () => import('./warehouse/warehouse.module').then(m => m.WarehouseModule) },
   { path: 'Authorizer', loadChildren: () => import('./authorizer/authorizer.module').then(m => m.AuthorizerModule) },
-  { path: 'distributor', loadChildren: () => import('./distributor/distributor.module').then(m => m.DistributorModule) }
+  { path: 'Distributor', loadChildren: () => import('./distributor/distributor.module').then(m => m.DistributorModule) }
 ];
 
 @NgModule({
