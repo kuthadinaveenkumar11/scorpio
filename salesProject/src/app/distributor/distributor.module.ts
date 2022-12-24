@@ -12,6 +12,7 @@ import { ViewAllComponent } from './purchace-order/view-all/view-all.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   imports: [
     CommonModule,MatMenuModule,MatToolbarModule,MatIconModule,
-    DistributorRoutingModule
+    DistributorRoutingModule,FormsModule,ReactiveFormsModule
   ]
 })
 export class DistributorModule { }
