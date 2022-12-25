@@ -26,7 +26,7 @@ export class LoginComponent {
     {
       if(this.loginform.value.Uname=='naveen11'&&this.loginform.value.Pssword=='12345')
     {
-    this.routee.navigate(['Distributor']);
+    this.routee.navigate(['Admin']);
     }
     else{
       console.log(this.loginform.value);
@@ -35,9 +35,6 @@ export class LoginComponent {
     }
     else{
     alert("Select the user ")}
-
-
-    
   }
   Distributor(){
       this.changing="Enter the Distributor Mail";

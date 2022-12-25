@@ -10,6 +10,7 @@ import { StatusComponent } from './status/status.component';
 import { ProcessedPurchaseorderFromWarehouseComponent } from './processed-purchaseorder-from-warehouse/processed-purchaseorder-from-warehouse.component';
 import { TotalSalesEodComponent } from './total-sales-eod/total-sales-eod.component';
 import { ViewAndEditProductCatalogAndPriceComponent } from './view-and-edit-product-catalog-and-price/view-and-edit-product-catalog-and-price.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { ViewAndEditProductCatalogAndPriceComponent } from './view-and-edit-prod
     ViewAndEditProductCatalogAndPriceComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule,MatToolbarModule,
     AdminRoutingModule
   ]
 })
