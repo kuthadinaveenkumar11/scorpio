@@ -16,10 +16,11 @@ import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    LoginComponent, 
   ],
   imports: [
     BrowserModule,
