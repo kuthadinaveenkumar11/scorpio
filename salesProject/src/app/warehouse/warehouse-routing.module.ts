@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IntimateCourierServiceAndDispatchComponent } from './intimate-courier-service-and-dispatch/intimate-courier-service-and-dispatch.component';
+import { ListOfStockComponent } from './list-of-stock/list-of-stock.component';
 import { NewStockEntryComponent } from './new-stock-entry/new-stock-entry.component';
 import { PreparePackingListAsPerPurchaseOrderComponent } from './prepare-packing-list-as-per-purchase-order/prepare-packing-list-as-per-purchase-order.component';
 import { ReceivePurchaseOrdersFromAuthorizerComponent } from './receive-purchase-orders-from-authorizer/receive-purchase-orders-from-authorizer.component';
@@ -22,6 +23,9 @@ const routes: Routes = [{ path: '', component: WarehouseComponent },
 },
 {
   path:'update the courier tracking info',component:UpdateTheCourierTrackingInfoToMicroDistributorComponent
+},
+{
+  path:'list of stock',component:ListOfStockComponent
 }
 ];
 
