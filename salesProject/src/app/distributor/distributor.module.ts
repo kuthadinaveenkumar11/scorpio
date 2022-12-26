@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DisregisterComponent } from './disregister/disregister.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PurchaceOrderComponent,
     StockComponent,
     RaiseNewComponent,
-    ViewAllComponent
+    ViewAllComponent,
+    DisregisterComponent
   ],
   imports: [
     CommonModule,MatMenuModule,MatToolbarModule,MatIconModule,
