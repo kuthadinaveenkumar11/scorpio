@@ -90,7 +90,7 @@ export class LoginComponent {
   Warehouse(){
     this.changing="Enter the Warehouse Mail";
     this.passwordchanging="Enter the Warehouse Password";
-    this.disabled=true;
+    this.disabled=false;
     this.loginform.value.dis="warehousevalue";
 
 
@@ -108,7 +108,7 @@ export class LoginComponent {
       this.routee.navigate(['Distributor/disregis']);
     }
     else if(this.loginform.value.dis=="warehousevalue"){
-      this.routee.navigate(['Distributor/disregis']);
+      this.routee.navigate(['Warehouse/wareregis']);
     }
   }
 }
