@@ -14,14 +14,12 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
-import { RegisterComponent } from './login/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
