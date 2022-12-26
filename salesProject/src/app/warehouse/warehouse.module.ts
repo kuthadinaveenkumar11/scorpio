@@ -8,7 +8,8 @@ import { ReceivePurchaseOrdersFromAuthorizerComponent } from './receive-purchase
 import { PreparePackingListAsPerPurchaseOrderComponent } from './prepare-packing-list-as-per-purchase-order/prepare-packing-list-as-per-purchase-order.component';
 import { IntimateCourierServiceAndDispatchComponent } from './intimate-courier-service-and-dispatch/intimate-courier-service-and-dispatch.component';
 import { UpdateTheCourierTrackingInfoToMicroDistributorComponent } from './update-the-courier-tracking-info-to-micro-distributor/update-the-courier-tracking-info-to-micro-distributor.component';
-import { WareregisterComponent } from './wareregister/wareregister.component';
+import { ListOfStockComponent } from './list-of-stock/list-of-stock.component';
+import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -19,11 +20,11 @@ import { WareregisterComponent } from './wareregister/wareregister.component';
     PreparePackingListAsPerPurchaseOrderComponent,
     IntimateCourierServiceAndDispatchComponent,
     UpdateTheCourierTrackingInfoToMicroDistributorComponent,
-    WareregisterComponent
+    ListOfStockComponent
   ],
   imports: [
     CommonModule,
-    WarehouseRoutingModule
+    WarehouseRoutingModule,MatToolbarModule
   ]
 })
 export class WarehouseModule { }
