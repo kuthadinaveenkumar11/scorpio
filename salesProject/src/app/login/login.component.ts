@@ -103,6 +103,11 @@ export class LoginComponent {
 
 
   }
+  register(){
+    if(this.loginform.value.dis=="Distributorvalue"){
+      this.routee.navigate(['Distributor/stock']);
+    }
+  }
 }
   
 

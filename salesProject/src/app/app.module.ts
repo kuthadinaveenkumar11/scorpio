@@ -20,8 +20,7 @@ import { DistributorModule } from './distributor/distributor.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    
+    LoginComponent, 
   ],
   imports: [
     BrowserModule,
