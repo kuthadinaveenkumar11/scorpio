@@ -24,9 +24,42 @@ export class LoginComponent {
 
   }
   onClick(){
-    if(this.loginform.value.dis=="Dist")
+    console.log(this.loginform.value);
+
+    if(this.loginform.value.dis=="Distributorvalue")
     {
-     if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+      console.log(this.loginform.value.dis);
+
+      if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['Distributor']);
+    }
+    else{
+    alert("enter crt");
+    }
+
+
+    }
+    else if (this.loginform.value.dis=="Authorizervalue"){
+      if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['Authorizer']);
+    }
+    else{
+    alert("enter crt");
+    }
+    }
+    else if (this.loginform.value.dis=="warehousevalue"){
+      if(this.loginform.value.Uname=='ware'&&this.loginform.value.Pssword=='12345')
+      {
+        this.routee.navigate(['Warehouses']);
+      }
+      else{
+        alert("enter crt");
+      }
+    }
+    else if (this.loginform.value.dis=="adminvalue"){
+      if(this.loginform.value.Uname=='admin'&&this.loginform.value.Pssword=='12345')
     {
     this.routee.navigate(['Admin']);
     }
@@ -34,6 +67,7 @@ export class LoginComponent {
     alert("enter crt");
     }
     }
+    
     else{
     alert("Select the user ")
     }
@@ -44,24 +78,33 @@ export class LoginComponent {
       this.loginform.value.dis="Distributorvalue";
       this.disabled=false;
       console.log(this.loginform.value);
+
+
+
   }
   Authorizer(){
     this.changing="Enter the Authorizer Mail";
     this.passwordchanging="Enter the Authorizer Password";
     this.disabled=true;
     this.loginform.value.dis="Authorizervalue";
+
+
   }
   Warehouse(){
     this.changing="Enter the Warehouse Mail";
     this.passwordchanging="Enter the Warehouse Password";
     this.disabled=false;
     this.loginform.value.dis="warehousevalue";
+
+
   }
   Admin(){
     this.changing="Enter the Admin Mail";
     this.passwordchanging="Enter the Admin Password";
     this.disabled=true;
     this.loginform.value.dis="adminvalue";
+
+
   }
   register(){
     if(this.loginform.value.dis=="Distributorvalue"){
@@ -69,9 +112,6 @@ export class LoginComponent {
     }
     else if(this.loginform.value.dis=="warehousevalue"){
       this.routee.navigate(['Warehouse/wareregis']);
-    }
-  }
+    }
+  }
 }
-  
-
-
