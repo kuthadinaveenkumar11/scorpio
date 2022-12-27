@@ -10,10 +10,10 @@
 </mat-toolbar>
 <form [formGroup]="loginform">
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="Distributor()"  ngDefaultControl formControlName="dis">Distributor</button>
-        <button mat-menu-item (click)="Authorizer()" ngDefaultControl formControlName="dis">Authorizer</button>
-        <button mat-menu-item (click)="Warehouse()" ngDefaultControl formControlName="dis">Warehouse</button>
-        <button mat-menu-item (click)="Admin()" ngDefaultControl formControlName="dis">Admin</button>
+        <button mat-menu-item (click)="Distributor()"  ngDefaultControl formControlName="dis"><mat-icon>add_shopping_cart</mat-icon>Distributor</button>
+        <button mat-menu-item (click)="Authorizer()" ngDefaultControl formControlName="dis"><mat-icon>account_circle</mat-icon>Authorizer</button>
+        <button mat-menu-item (click)="Warehouse()" ngDefaultControl formControlName="dis"><mat-icon>shopping_cart</mat-icon>Warehouse</button>         
+        <button mat-menu-item (click)="Admin()" ngDefaultControl formControlName="dis"><mat-icon>supervised_user_circle</mat-icon>Admin</button>
     </mat-menu>
     <div class="login_page">
         <mat-form-field class="example-full-width">

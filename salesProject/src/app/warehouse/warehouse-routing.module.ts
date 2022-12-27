@@ -8,9 +8,12 @@ import { ReceivePurchaseOrdersFromAuthorizerComponent } from './receive-purchase
 import { UpdateTheCourierTrackingInfoToMicroDistributorComponent } from './update-the-courier-tracking-info-to-micro-distributor/update-the-courier-tracking-info-to-micro-distributor.component';
 import { WarehouseComponent } from './warehouse.component';
 
-const routes: Routes = [{ path: '', component: WarehouseComponent },
+const routes: Routes = [{ path:'', component:WarehouseComponent },
 {
   path:'new-stock',component:NewStockEntryComponent
+},
+{
+  path:'list',component:ListOfStockComponent
 },
 {
   path:'courier-service',component:IntimateCourierServiceAndDispatchComponent
@@ -24,9 +27,7 @@ const routes: Routes = [{ path: '', component: WarehouseComponent },
 {
   path:'update the courier tracking info',component:UpdateTheCourierTrackingInfoToMicroDistributorComponent
 },
-{
-  path:'list of stock',component:ListOfStockComponent
-}
+
 ];
 
 @NgModule({
