@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projects_Web_Api.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,21 @@ namespace Projects_Web_Api.Repos
 {
     public interface InterfaceOfDis
     {
-
+        Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(String PAN);
     }
     public class ClassofDis : InterfaceOfDis
     {
+        scorpioDBEntities obj = new scorpioDBEntities();
+        Model_Of_Drisributer_Profile InterfaceOfDis.Get_Of_Drisributer_Profile(String PAN)
+        {
+            var dis = obj.distributer_profiles.Where(n=>n.PANNo==PAN).Select(s => new Model_Of_Drisributer_Profile()
+            {
+                Name = s.Name,
+                ContactNumber=s.ContactNumber,
+                PANNo=s.PANNo
+            }).FirstOrDefault();
+            return dis;
+        }
 
     }
 }
