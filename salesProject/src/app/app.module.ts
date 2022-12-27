@@ -31,7 +31,7 @@ import { DistributorModule } from './distributor/distributor.module';
     AppRoutingModule,ReactiveFormsModule,FormsModule,
     BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,
     MatMenuModule,MatButtonModule,
-    MatInputModule,MatToolbarModule,
+    MatInputModule,MatToolbarModule
     
   ],
   providers: [],

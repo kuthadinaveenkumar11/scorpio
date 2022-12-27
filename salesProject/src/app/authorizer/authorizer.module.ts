@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { AuthorizerRoutingModule } from './authorizer-routing.module';
 import { AuthorizerComponent } from './authorizer.component';
+import { RequestComponent } from './request/request.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
   declarations: [
-    AuthorizerComponent
+    AuthorizerComponent,
+    RequestComponent,
+    OrderTrackingComponent
   ],
   imports: [
     CommonModule,
-    AuthorizerRoutingModule
+    AuthorizerRoutingModule,MatToolbarModule
   ]
 })
 export class AuthorizerModule { }
