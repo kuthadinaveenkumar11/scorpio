@@ -37,8 +37,6 @@ export class LoginComponent {
     else{
     alert("enter crt");
     }
-
-
     }
     else if (this.loginform.value.dis=="Authorizervalue"){
       if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
@@ -53,6 +51,8 @@ export class LoginComponent {
       if(this.loginform.value.Uname=='ware'&&this.loginform.value.Pssword=='12345')
       {
         this.routee.navigate(['Warehouse']);
+        this.routee.navigate(['Warehouses']);
+
       }
       else{
         alert("enter crt");
@@ -78,24 +78,33 @@ export class LoginComponent {
       this.loginform.value.dis="Distributorvalue";
       this.disabled=false;
       console.log(this.loginform.value);
+
+
+
   }
   Authorizer(){
     this.changing="Enter the Authorizer Mail";
     this.passwordchanging="Enter the Authorizer Password";
     this.disabled=true;
     this.loginform.value.dis="Authorizervalue";
+
+
   }
   Warehouse(){
     this.changing="Enter the Warehouse Mail";
     this.passwordchanging="Enter the Warehouse Password";
     this.disabled=false;
     this.loginform.value.dis="warehousevalue";
+
+
   }
   Admin(){
     this.changing="Enter the Admin Mail";
     this.passwordchanging="Enter the Admin Password";
     this.disabled=true;
     this.loginform.value.dis="adminvalue";
+
+
   }
   register(){
     if(this.loginform.value.dis=="Distributorvalue"){
@@ -103,9 +112,6 @@ export class LoginComponent {
     }
     else if(this.loginform.value.dis=="warehousevalue"){
       this.routee.navigate(['Warehouse/wareregis']);
-    }
-  }
+    }
+  }
 }
-  
-
-
