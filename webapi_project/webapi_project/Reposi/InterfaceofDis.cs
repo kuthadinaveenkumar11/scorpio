@@ -8,5 +8,10 @@ namespace webapi_project.Reposi
 {
     interface InterfaceofDis
     {
+
+    }
+    public class ClassOfDis:InterfaceofDis
+    {
+
     }
 }
