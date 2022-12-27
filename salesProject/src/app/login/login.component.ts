@@ -26,13 +26,13 @@ export class LoginComponent {
   onClick(){
     if(this.loginform.value.dis=="Dist")
     {
-     if(this.loginform.value.Uname=='naveen11'&&this.loginform.value.Pssword=='12345')
+     if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
     {
     this.routee.navigate(['Admin']);
     }
     else{
     alert("enter crt");
-    }
+    } 
     }
     else{
     alert("Select the user ")
