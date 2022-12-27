@@ -10,4 +10,8 @@ namespace Projects_Web_Api.Repos
     {
 
     }
+    public class ClassofDis : InterfaceOfDis
+    {
+
+    }
 }
