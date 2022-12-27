@@ -32,7 +32,7 @@ export class LoginComponent {
     }
     else{
     alert("enter crt");
-    }
+    } 
     }
     else{
     alert("Select the user ")
