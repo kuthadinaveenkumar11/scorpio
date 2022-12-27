@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { WarehousesRoutingModule } from './warehouses-routing.module';
 import { WarehousesComponent } from './warehouses.component';
 import { NewStockEntryComponent } from './new-stock-entry/new-stock-entry.component';
