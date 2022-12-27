@@ -15,6 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,13 +26,13 @@ import { DistributorModule } from './distributor/distributor.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,HttpClientModule,
     BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,
     DistributorModule,
     AppRoutingModule,ReactiveFormsModule,FormsModule,
     BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,
     MatMenuModule,MatButtonModule,
-    MatInputModule,MatToolbarModule,
+    MatInputModule,MatToolbarModule
     
   ],
   providers: [],

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="scorpioDBModelStoreContainer" CdmEntityContainer="scorpioDBEntities">
+    <EntitySetMapping Name="distributer_profiles">
+      <EntityTypeMapping TypeName="scorpioDBModel.distributer_profile">
+        <MappingFragment StoreEntitySet="distributer profile">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TINNo" ColumnName="TINNo" />
+          <ScalarProperty Name="PANNo" ColumnName="PANNo" />
+          <ScalarProperty Name="BankIFSCCode" ColumnName="BankIFSCCode" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

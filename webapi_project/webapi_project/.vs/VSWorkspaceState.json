@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\obj",
     "\\obj\\Debug"
   ],
   "SelectedNode": "\\obj\\Debug\\webapi_project.csproj.AssemblyReference.cache",
+=======
+    ""
+  ],
+  "SelectedNode": "\\Reposi",
+>>>>>>> d7eba0deb8bba96319f1f70b98d77d3ba89a5d3d
   "PreviewInSolutionExplorer": false
 }
