@@ -6,6 +6,10 @@ import { AuthorizerComponent } from './authorizer.component';
 import { RequestComponent } from './request/request.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 
 @NgModule({
@@ -16,7 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   ],
   imports: [
     CommonModule,
-    AuthorizerRoutingModule,MatToolbarModule
+    AuthorizerRoutingModule,MatToolbarModule,MatIconModule,MatInputModule
   ]
 })
 export class AuthorizerModule { }
