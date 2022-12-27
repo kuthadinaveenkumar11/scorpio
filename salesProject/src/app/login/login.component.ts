@@ -37,8 +37,6 @@ export class LoginComponent {
     else{
     alert("enter crt");
     }
-
-
     }
     else if (this.loginform.value.dis=="Authorizervalue"){
       if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
