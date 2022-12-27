@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 
+
 import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
 
@@ -30,7 +31,7 @@ import { DistributorModule } from './distributor/distributor.module';
     AppRoutingModule,ReactiveFormsModule,FormsModule,
     BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,
     MatMenuModule,MatButtonModule,
-    MatInputModule,MatToolbarModule
+    MatInputModule,MatToolbarModule,
     
   ],
   providers: [],
