@@ -7,7 +7,7 @@ import { RequestComponent } from './request/request.component';
 const routes: Routes = [
   {path:'',component:AuthorizerComponent},
   { path: 'order-tracking', component: OrderTrackingComponent },
-  {path:'request',component:RequestComponent},
+  {path:'request',component:RequestComponent}
 ];
 
 @NgModule({
