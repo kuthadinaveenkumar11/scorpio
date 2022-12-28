@@ -12,9 +12,9 @@ export class ApiServiceService {
   Login(username:string|any,password:string|any){
       this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/"+username+"/"+password).subscribe(e=>{
         this.outputofDisdetails=e;
-        setTimeout(() => {
-          this.outputofDisdetails = null
-        }, 2000)
+        // setTimeout(() => {
+        //    this.outputofDisdetails = null
+        // }, 4000)
   });
   }
 }
