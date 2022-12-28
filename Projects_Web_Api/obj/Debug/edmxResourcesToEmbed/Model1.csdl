@@ -12,8 +12,35 @@
     <Property Name="PANNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="BankIFSCCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="BankAccountNumber" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="distributerlogin" Relationship="scorpioDBModel.FK__distribut__PANNo__3A81B327" FromRole="distributer_profile" ToRole="distributerlogin" />
   </EntityType>
   <EntityContainer Name="scorpioDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="distributer_profiles" EntityType="Self.distributer_profile" />
+    <EntitySet Name="distributerlogins" EntityType="scorpioDBModel.distributerlogin" />
+    <AssociationSet Name="FK__distribut__PANNo__3A81B327" Association="scorpioDBModel.FK__distribut__PANNo__3A81B327">
+      <End Role="distributer_profile" EntitySet="distributer_profiles" />
+      <End Role="distributerlogin" EntitySet="distributerlogins" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="distributerlogin">
+    <Key>
+      <PropertyRef Name="PANNo" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PANNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="distributer_profile" Relationship="scorpioDBModel.FK__distribut__PANNo__3A81B327" FromRole="distributerlogin" ToRole="distributer_profile" />
+  </EntityType>
+  <Association Name="FK__distribut__PANNo__3A81B327">
+    <End Type="scorpioDBModel.distributer_profile" Role="distributer_profile" Multiplicity="1" />
+    <End Type="scorpioDBModel.distributerlogin" Role="distributerlogin" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="distributer_profile">
+        <PropertyRef Name="PANNo" />
+      </Principal>
+      <Dependent Role="distributerlogin">
+        <PropertyRef Name="PANNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
