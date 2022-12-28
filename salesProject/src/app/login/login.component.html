@@ -15,7 +15,26 @@
         <button mat-menu-item (click)="Warehouse()" ngDefaultControl formControlName="dis"><mat-icon>shopping_cart</mat-icon>Warehouse</button>         
         <button mat-menu-item (click)="Admin()" ngDefaultControl formControlName="dis"><mat-icon>supervised_user_circle</mat-icon>Admin</button>
     </mat-menu>
+    <div class="option">
+        <mat-form-field appearance="fill" >
+            <mat-label>Select The User Type</mat-label>
+            <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="Distributor" formControlName="dis">Distributor</mat-option>
+            <mat-option value="Authorizer" formControlName="dis">Authorizer</mat-option>
+            <mat-option value="Warehouse" formControlName="dis">Warehouse</mat-option>
+            <mat-option value="Admin" formControlName="dis">Admin</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+
     <div class="login_page">
+
+
+          
+          <h1><p>{{selected}}</p></h1>
         <mat-form-field class="example-full-width">
             <mat-label>Email*</mat-label>
             <input type="email" matInput placeholder="{{changing}}"  formControlName="Uname">

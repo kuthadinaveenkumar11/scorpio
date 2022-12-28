@@ -13,6 +13,7 @@ export class LoginComponent {
   changing:string="Select The User Type";
   passwordchanging:string="Select The User Type";
   disabled=true;
+  selected:any;
   
   
   loginform=new FormGroup({
@@ -26,17 +27,17 @@ export class LoginComponent {
 
   }
   onClick(){
-    this.api.outputofDisdetails
     console.log(this.loginform.value);
 
     if(this.loginform.value.dis=="Distributorvalue")
     {
-      this.api.Login(this.loginform.value.Uname,this.loginform.value.Pssword)
+      this.api.Login(this.loginform.value.Uname,this.loginform.value.Pssword);
       console.log(this.loginform.value.dis);
+      console.log(this.api.outputofDisdetails);
       if(this.api.outputofDisdetails=="exist"){
         this.routee.navigate(['Distributor']);
-      }
-      
+     }
+
     //   if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
     // {
     // this.routee.navigate(['Distributor']);
