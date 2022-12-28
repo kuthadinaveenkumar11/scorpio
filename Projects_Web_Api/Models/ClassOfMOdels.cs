@@ -15,5 +15,15 @@ namespace Projects_Web_Api.Models
         public string PANNo { get; set; }
         public string BankIFSCCode { get; set; }
         public decimal BankAccountNumber { get; set; }
+
     }
+    public class Distributerlogin
+    {
+        public string username { get; set; }
+        public string password { get; set; }
+        public string PANNo { get; set; }
+
+        public virtual distributer_profile distributer_profile { get; set; }
+    }
+
 }

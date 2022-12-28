@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-login',
@@ -13,30 +14,36 @@ export class LoginComponent {
   passwordchanging:string="Select The User Type";
   disabled=true;
   
+  
   loginform=new FormGroup({
     Uname:new FormControl(''),
     Pssword:new FormControl(''),
     dis:new FormControl('')
   })
-  constructor(private routee:Router) { }
+  constructor(private routee:Router,private api:ApiServiceService) { }
 
   ngOnInit(): void {
 
   }
   onClick(){
+    this.api.outputofDisdetails
     console.log(this.loginform.value);
 
     if(this.loginform.value.dis=="Distributorvalue")
     {
+      this.api.Login(this.loginform.value.Uname,this.loginform.value.Pssword)
       console.log(this.loginform.value.dis);
+      if(this.api.outputofDisdetails=="exist"){
+        this.routee.navigate(['Distributor']);
+      }
 
-      if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
-    {
-    this.routee.navigate(['Distributor']);
-    }
-    else{
-    alert("enter crt");
-    }
+    //   if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+    // {
+    // this.routee.navigate(['Distributor']);
+    // }
+    // else{
+    // alert("enter crt");
+    // }
     }
     else if (this.loginform.value.dis=="Authorizervalue"){
       if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')

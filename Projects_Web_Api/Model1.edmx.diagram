@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="310035e6cd8640a89eca92cb00e4d8a3" Name="Diagram1">
         <EntityTypeShape EntityType="scorpioDBModel.distributer_profile" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="scorpioDBModel.distributerlogin" Width="1.5" PointX="3" PointY="1.25" />
+        <AssociationConnector Association="scorpioDBModel.FK__distribut__PANNo__3A81B327" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

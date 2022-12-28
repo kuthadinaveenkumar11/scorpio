@@ -17,10 +17,19 @@ namespace Projects_Web_Api.Controllers
         }
         [Route("api/Scorpio/GetOfDisProfile/{PAN}")]
         [HttpGet]
-        public IHttpActionResult Get_Of_Drisributer_Profile(String PAN)
+        public IHttpActionResult Get_Of_Drisributer_Profile(string PAN)
         {
             var em = Local.Get_Of_Drisributer_Profile(PAN);
             return Ok(em);
         }
+        [Route("api/Scorpio/GetOfDisProfile/{username}/{password}")]
+        [HttpGet]
+        public IHttpActionResult Get_of_Drisributer_Login(string username, string password)
+        {
+            var em = Local.Get_of_Drisributer_Login(username,password);
+            return Ok(em);
+        }
+
     }
 }
+

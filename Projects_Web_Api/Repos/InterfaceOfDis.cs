@@ -9,12 +9,14 @@ namespace Projects_Web_Api.Repos
 {
     public interface InterfaceOfDis
     {
-        Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(String PAN);
+        Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(string PAN);
+        string Get_of_Drisributer_Login(string Id, string password);
+
     }
     public class ClassofDis : InterfaceOfDis
     {
         scorpioDBEntities obj = new scorpioDBEntities();
-        Model_Of_Drisributer_Profile InterfaceOfDis.Get_Of_Drisributer_Profile(String PAN)
+        Model_Of_Drisributer_Profile InterfaceOfDis.Get_Of_Drisributer_Profile(string PAN)
         {
             var dis = obj.distributer_profiles.Where(n=>n.PANNo==PAN).Select(s => new Model_Of_Drisributer_Profile()
             {
@@ -24,6 +26,17 @@ namespace Projects_Web_Api.Repos
             }).FirstOrDefault();
             return dis;
         }
+        string InterfaceOfDis.Get_of_Drisributer_Login(string username,string password)
+        {
+            var dis = obj.distributerlogins.Where(n => n.username ==username&& n.password==password).FirstOrDefault();
+            if (dis != null)
+            {
+                return "exist";
+            }
+            return "not";
+            
+        }
 
     }
+
 }

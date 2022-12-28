@@ -12,17 +12,12 @@ namespace Projects_Web_Api
     using System;
     using System.Collections.Generic;
     
-    public partial class distributer_profile
+    public partial class distributerlogin
     {
-        public string Name { get; set; }
-        public decimal ContactNumber { get; set; }
-        public string FirmName { get; set; }
-        public string Address { get; set; }
-        public int TINNo { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
         public string PANNo { get; set; }
-        public string BankIFSCCode { get; set; }
-        public decimal BankAccountNumber { get; set; }
     
-        public virtual distributerlogin distributerlogin { get; set; }
+        public virtual distributer_profile distributer_profile { get; set; }
     }
 }

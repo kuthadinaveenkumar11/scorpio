@@ -13,10 +13,10 @@ namespace Projects_Web_Api
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class scorpioDBEntities : DbContext
+    public partial class scorpioDBEntities1 : DbContext
     {
-        public scorpioDBEntities()
-            : base("name=scorpioDBEntities")
+        public scorpioDBEntities1()
+            : base("name=scorpioDBEntities1")
         {
         }
     
@@ -25,7 +25,6 @@ namespace Projects_Web_Api
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<distributer_profile> distributer_profiles { get; set; }
         public DbSet<distributerlogin> distributerlogins { get; set; }
     }
 }
