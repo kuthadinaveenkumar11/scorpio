@@ -21,6 +21,7 @@
       <End Role="distributer_profile" EntitySet="distributer_profiles" />
       <End Role="distributerlogin" EntitySet="distributerlogins" />
     </AssociationSet>
+    <EntitySet Name="Products" EntityType="scorpioDBModel.Product" />
   </EntityContainer>
   <EntityType Name="distributerlogin">
     <Key>
@@ -43,4 +44,16 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Product_id" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>
