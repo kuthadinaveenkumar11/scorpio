@@ -38,7 +38,8 @@
           <Property Name="Image" Type="varbinary(max)" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__distribut__PANNo__3A81B327">
+
+        <Association Name="FK__distribut__PANNo__267ABA7A">
           <End Role="distributer profile" Type="Self.distributer profile" Multiplicity="1" />
           <End Role="distributerlogin" Type="Self.distributerlogin" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -54,7 +55,8 @@
           <EntitySet Name="distributer profile" EntityType="Self.distributer profile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="distributerlogin" EntityType="Self.distributerlogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__distribut__PANNo__3A81B327" Association="Self.FK__distribut__PANNo__3A81B327">
+
+          <AssociationSet Name="FK__distribut__PANNo__267ABA7A" Association="Self.FK__distribut__PANNo__267ABA7A">
             <End Role="distributer profile" EntitySet="distributer profile" />
             <End Role="distributerlogin" EntitySet="distributerlogin" />
           </AssociationSet>
