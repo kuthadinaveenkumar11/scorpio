@@ -36,7 +36,7 @@ export class LoginComponent {
       if(this.api.outputofDisdetails=="exist"){
         this.routee.navigate(['Distributor']);
       }
-
+      
     //   if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
     // {
     // this.routee.navigate(['Distributor']);
