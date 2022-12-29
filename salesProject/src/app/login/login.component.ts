@@ -13,12 +13,15 @@ export class LoginComponent {
   changing:string="Select The User Type";
   passwordchanging:string="Select The User Type";
   disabled=true;
+  selected:any;
   
   
   loginform=new FormGroup({
     Uname:new FormControl(''),
     Pssword:new FormControl(''),
     dis:new FormControl('')
+
+
   })
   constructor(private routee:Router,private api:ApiServiceService) { }
 
@@ -26,17 +29,20 @@ export class LoginComponent {
 
   }
   onClick(){
-    this.api.outputofDisdetails
     console.log(this.loginform.value);
 
-    if(this.loginform.value.dis=="Distributorvalue")
+    if(this.loginform.value.dis=="Distributor")
     {
-      this.api.Login(this.loginform.value.Uname,this.loginform.value.Pssword)
+      this.api.Login(this.loginform.value.Uname,this.loginform.value.Pssword);
       console.log(this.loginform.value.dis);
-      if(this.api.outputofDisdetails=="exist"){
-        this.routee.navigate(['Distributor']);
-      }
-      
+      console.log(this.api.outputofDisdetails);
+      setTimeout(() => {
+        if(this.api.outputofDisdetails=="exist"){
+          this.routee.navigate(['Distributor']);
+       }
+      }, 3000);
+     
+
     //   if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
     // {
     // this.routee.navigate(['Distributor']);
@@ -45,7 +51,7 @@ export class LoginComponent {
     // alert("enter crt");
     // }
     }
-    else if (this.loginform.value.dis=="Authorizervalue"){
+    else if (this.loginform.value.dis=="Authorizer"){
       if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
     {
     this.routee.navigate(['Authorizer']);
@@ -54,10 +60,10 @@ export class LoginComponent {
     alert("enter crt");
     }
     }
-    else if (this.loginform.value.dis=="warehousevalue"){
+    else if (this.loginform.value.dis=="Warehouse"){
       if(this.loginform.value.Uname=='ware'&&this.loginform.value.Pssword=='12345')
       {
-        this.routee.navigate(['Warehouse']);
+        // this.routee.navigate(['Warehouse']);
         this.routee.navigate(['Warehouses']);
 
       }
@@ -65,7 +71,7 @@ export class LoginComponent {
         alert("enter crt");
       }
     }
-    else if (this.loginform.value.dis=="adminvalue"){
+    else if (this.loginform.value.dis=="Admin"){
       if(this.loginform.value.Uname=='admin'&&this.loginform.value.Pssword=='12345')
     {
     this.routee.navigate(['Admin']);
@@ -82,7 +88,6 @@ export class LoginComponent {
   Distributor(){
       this.changing="Enter the Distributor Mail";
       this.passwordchanging="Enter the Distributor Password";
-      this.loginform.value.dis="Distributorvalue";
       this.disabled=false;
       console.log(this.loginform.value);
 
@@ -93,7 +98,6 @@ export class LoginComponent {
     this.changing="Enter the Authorizer Mail";
     this.passwordchanging="Enter the Authorizer Password";
     this.disabled=true;
-    this.loginform.value.dis="Authorizervalue";
 
 
   }
@@ -101,7 +105,6 @@ export class LoginComponent {
     this.changing="Enter the Warehouse Mail";
     this.passwordchanging="Enter the Warehouse Password";
     this.disabled=false;
-    this.loginform.value.dis="warehousevalue";
 
 
   }
@@ -109,15 +112,12 @@ export class LoginComponent {
     this.changing="Enter the Admin Mail";
     this.passwordchanging="Enter the Admin Password";
     this.disabled=true;
-    this.loginform.value.dis="adminvalue";
-
-
   }
   register(){
-    if(this.loginform.value.dis=="Distributorvalue"){
+    if(this.loginform.value.dis=="Distributor"){
       this.routee.navigate(['Distributor/disregis']);
     }
-    else if(this.loginform.value.dis=="warehousevalue"){
+    else if(this.loginform.value.dis=="Warehouse"){
       this.routee.navigate(['Warehouse/wareregis']);
     }
   }

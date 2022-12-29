@@ -4,24 +4,43 @@
     <span class="example-spacer"></span>
     <span>{{currentDate | date:'yyyy-MM-dd'}}</span>
     
-    <button  mat-button [matMenuTriggerFor]="menu">
+    <!-- <button  mat-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
-  </button>
+  </button> -->
 </mat-toolbar>
 <form [formGroup]="loginform">
-    <mat-menu #menu="matMenu">
+    <!-- <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="Distributor()"  ngDefaultControl formControlName="dis"><mat-icon>add_shopping_cart</mat-icon>Distributor</button>
         <button mat-menu-item (click)="Authorizer()" ngDefaultControl formControlName="dis"><mat-icon>account_circle</mat-icon>Authorizer</button>
         <button mat-menu-item (click)="Warehouse()" ngDefaultControl formControlName="dis"><mat-icon>shopping_cart</mat-icon>Warehouse</button>         
         <button mat-menu-item (click)="Admin()" ngDefaultControl formControlName="dis"><mat-icon>supervised_user_circle</mat-icon>Admin</button>
-    </mat-menu>
+    </mat-menu> -->
+    <div class="option">
+        <mat-form-field appearance="fill" >
+            <mat-label>Select The User Type</mat-label>
+            <mat-select [(value)]="selected" formControlName="dis" >
+            <mat-option>None</mat-option>
+            <mat-option value="Distributor" (click)="Distributor()">Distributor</mat-option>
+            <mat-option value="Authorizer" >Authorizer</mat-option>
+            <mat-option value="Warehouse" (click)="Warehouse()">Warehouse</mat-option>
+            <mat-option value="Admin" >Admin</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+
     <div class="login_page">
+
+
+          
+          <h1><p>{{selected}}</p></h1>
         <mat-form-field class="example-full-width">
             <mat-label>Email*</mat-label>
             <input type="email" matInput placeholder="{{changing}}"  formControlName="Uname">
         </mat-form-field><br>
         <mat-form-field class="example-full-width">
-            <mat-label>PassWord*</mat-label>
+            <mat-label>Password*</mat-label>
             <input type="password" matInput placeholder="{{passwordchanging}}"  formControlName="Pssword">
         </mat-form-field><br> 
         <button mat-raised-button color="primary"   (click)="onClick()">Login</button>&nbsp;

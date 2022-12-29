@@ -7,11 +7,15 @@
     margin-left: 30%;
   }
   .login_page{
-    margin: 6%;
+    margin: 1%;
     text-align: center;
     border: solid 1px;
-    padding: 5%;
+    padding: 2%;
   }
   .example-full-width{
     width: 30%;
   }
+.option{
+  text-align:center;
+  padding-top: 3%;
+}
