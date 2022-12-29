@@ -8,6 +8,7 @@ import { TrackComponent } from './track/track.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { ServiceAndDispatchComponent } from './service-and-dispatch/service-and-dispatch.component';
 import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.component';
+import { matFormFieldAnimations, MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,8 @@ import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.compo
     PurchaseOrdersComponent
   ],
   imports: [
-    CommonModule,
-    WarehousesRoutingModule,MatToolbarModule
-  ]
+    CommonModule,MatToolbarModule,
+    WarehousesRoutingModule,
+    ]
 })
 export class WarehousesModule { }
