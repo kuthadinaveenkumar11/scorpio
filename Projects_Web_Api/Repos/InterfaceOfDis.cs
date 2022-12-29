@@ -15,7 +15,8 @@ namespace Projects_Web_Api.Repos
     }
     public class ClassofDis : InterfaceOfDis
     {
-        scorpioDBEntities obj = new scorpioDBEntities();
+        //scorpioDBEntities obj = new scorpioDBEntities();
+        EcomDBEntities obj = new EcomDBEntities();
         Model_Of_Drisributer_Profile InterfaceOfDis.Get_Of_Drisributer_Profile(string PAN)
         {
             var dis = obj.distributer_profiles.Where(n=>n.PANNo==PAN).Select(s => new Model_Of_Drisributer_Profile()
