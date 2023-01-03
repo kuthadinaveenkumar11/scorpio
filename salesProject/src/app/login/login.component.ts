@@ -40,7 +40,7 @@ export class LoginComponent {
         if(this.api.outputofDisdetails=="exist"){
           this.routee.navigate(['Distributor']);
        }
-      }, 3000);
+      }, 1000);
      
 
       if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
