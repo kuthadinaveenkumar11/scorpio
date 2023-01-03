@@ -43,13 +43,13 @@ export class LoginComponent {
       }, 3000);
      
 
-    //   if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
-    // {
-    // this.routee.navigate(['Distributor']);
-    // }
-    // else{
-    // alert("enter crt");
-    // }
+      if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['Distributor']);
+    }
+    else{
+    alert("enter crt");
+    }
     }
     else if (this.loginform.value.dis=="Authorizer"){
       if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
