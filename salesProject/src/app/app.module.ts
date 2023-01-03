@@ -17,7 +17,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -28,12 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,
-    DistributorModule,
-    AppRoutingModule,ReactiveFormsModule,FormsModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatSelectModule,
-    MatMenuModule,MatButtonModule,
-    MatInputModule,MatToolbarModule
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,MatSelectModule,
+    
+    AppRoutingModule,
+    ReactiveFormsModule,FormsModule
+    ,MatFormFieldModule,MatCardModule
     
   ],
   providers: [],
