@@ -18,22 +18,22 @@
     <EntitySetMapping Name="distributerlogins">
       <EntityTypeMapping TypeName="scorpioDBModel.distributerlogin">
         <MappingFragment StoreEntitySet="distributerlogin">
-          <ScalarProperty Name="PANNo" ColumnName="PANNo" />
-          <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="PANNo" ColumnName="PANNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="scorpioDBModel.Product">
         <MappingFragment StoreEntitySet="Product">
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

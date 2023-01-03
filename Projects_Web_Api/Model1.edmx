@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="scorpioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="scorpioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="distributer profile">
           <Key>
             <PropertyRef Name="PANNo" />
@@ -59,7 +59,8 @@
             <End Role="distributerlogin" EntitySet="distributerlogin" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="scorpioDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -75,29 +76,32 @@
           <Property Name="PANNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="BankIFSCCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="BankAccountNumber" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <NavigationProperty Name="distributerlogin" Relationship="scorpioDBModel.FK__distribut__PANNo__3A81B327" FromRole="distributer_profile" ToRole="distributerlogin" />
+          <NavigationProperty Name="distributerlogin" Relationship="Self.FK__distribut__PANNo__3A81B327" FromRole="distributer_profile" ToRole="distributerlogin" />
         </EntityType>
-        <EntityContainer Name="scorpioDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="distributer_profiles" EntityType="Self.distributer_profile" />
-          <EntitySet Name="distributerlogins" EntityType="scorpioDBModel.distributerlogin" />
-          <AssociationSet Name="FK__distribut__PANNo__3A81B327" Association="scorpioDBModel.FK__distribut__PANNo__3A81B327">
-            <End Role="distributer_profile" EntitySet="distributer_profiles" />
-            <End Role="distributerlogin" EntitySet="distributerlogins" />
-          </AssociationSet>
-          <EntitySet Name="Products" EntityType="scorpioDBModel.Product" />
-        </EntityContainer>
         <EntityType Name="distributerlogin">
           <Key>
             <PropertyRef Name="PANNo" />
           </Key>
-          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PANNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="distributer_profile" Relationship="scorpioDBModel.FK__distribut__PANNo__3A81B327" FromRole="distributerlogin" ToRole="distributer_profile" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PANNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="distributer_profile" Relationship="Self.FK__distribut__PANNo__3A81B327" FromRole="distributerlogin" ToRole="distributer_profile" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Product_id" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Product_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK__distribut__PANNo__3A81B327">
-          <End Type="scorpioDBModel.distributer_profile" Role="distributer_profile" Multiplicity="1" />
-          <End Type="scorpioDBModel.distributerlogin" Role="distributerlogin" Multiplicity="0..1" />
+          <End Role="distributer_profile" Type="Self.distributer_profile" Multiplicity="1" />
+          <End Role="distributerlogin" Type="Self.distributerlogin" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="distributer_profile">
               <PropertyRef Name="PANNo" />
@@ -107,18 +111,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Product">
-          <Key>
-            <PropertyRef Name="Product_id" />
-          </Key>
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Product_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="Quantity" Type="Int32" Nullable="false" />
-        </EntityType>
+        <EntityContainer Name="scorpioDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="distributer_profiles" EntityType="Self.distributer_profile" />
+          <EntitySet Name="distributerlogins" EntityType="Self.distributerlogin" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <AssociationSet Name="FK__distribut__PANNo__3A81B327" Association="Self.FK__distribut__PANNo__3A81B327">
+            <End Role="distributer_profile" EntitySet="distributer_profiles" />
+            <End Role="distributerlogin" EntitySet="distributerlogins" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -142,22 +143,22 @@
           <EntitySetMapping Name="distributerlogins">
             <EntityTypeMapping TypeName="scorpioDBModel.distributerlogin">
               <MappingFragment StoreEntitySet="distributerlogin">
-                <ScalarProperty Name="PANNo" ColumnName="PANNo" />
-                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="PANNo" ColumnName="PANNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="scorpioDBModel.Product">
               <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Product_id" ColumnName="Product_id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

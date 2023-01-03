@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="310035e6cd8640a89eca92cb00e4d8a3" Name="Diagram1">
-        <EntityTypeShape EntityType="scorpioDBModel.distributer_profile" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="scorpioDBModel.distributerlogin" Width="1.5" PointX="3" PointY="1.25" />
-        <AssociationConnector Association="scorpioDBModel.FK__distribut__PANNo__3A81B327" />
-        <EntityTypeShape EntityType="scorpioDBModel.Product" Width="1.5" PointX="0.75" PointY="4.75" />
+      <Diagram DiagramId="b7846d06aaf24713aea63cdaef4a4282" Name="Diagram1">
+        <EntityTypeShape EntityType="scorpioDBModel.distributer_profile" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="scorpioDBModel.distributerlogin" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="scorpioDBModel.Product" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="scorpioDBModel.FK__distribut__PANNo__3A81B327" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

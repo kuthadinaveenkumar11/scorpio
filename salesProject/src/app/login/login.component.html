@@ -21,9 +21,9 @@
             <mat-select [(value)]="selected" formControlName="dis" >
             <mat-option>None</mat-option>
             <mat-option value="Distributor" (click)="Distributor()">Distributor</mat-option>
-            <mat-option value="Authorizer" >Authorizer</mat-option>
+            <mat-option value="Authorizer" (click)="Authorizer()">Authorizer</mat-option>
             <mat-option value="Warehouse" (click)="Warehouse()">Warehouse</mat-option>
-            <mat-option value="Admin" >Admin</mat-option>
+            <mat-option value="Admin" (click)="Admin()">Admin</mat-option>
 
             </mat-select>
         </mat-form-field>
