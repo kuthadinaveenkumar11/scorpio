@@ -19,3 +19,10 @@
         </button>
     </div>
 </header>
+<div class="container">
+    <ng-container *ngFor="let item of productlist">
+        <img src={{item.Description}}>
+        <p>{{item.Name}}</p>
+        <!-- <p>{{item.Description}}</p> -->
+    </ng-container>
+</div>

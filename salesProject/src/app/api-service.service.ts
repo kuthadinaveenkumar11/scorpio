@@ -6,23 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class ApiServiceService {
   outputofDisdetails!:any;
-  httpOption={
-    headers:new HttpHeaders({
-      'Content-Type':'application/json'
-    })
-  };
-  constructor(private http:HttpClient) { }
-  //   // this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/{PAN}");
-  // }
-   Login(username:string|any,password:string|any){
-       this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/"+username+"/"+password).subscribe(e=>{
-         this.outputofDisdetails=e;
-   })}
-  //       // setTimeout(() => {
-         //  this.outputofDisdetails = null
-        // }, 4000)
-   insert(data:any){
-    return this.http.post("",data,this.httpOption).subscribe();
-  }
-  }
 
+  constructor(private http:HttpClient) { 
+    // this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/{PAN}");
+  }
+  Login(username:string|any,password:string|any){
+      this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/"+username+"/"+password).subscribe(e=>{
+        this.outputofDisdetails=e;})}
+        // setTimeout(() => {
+
+  GetProduct(){
+    this.http.get("https://localhost:44367/api/Scorpio/GetProduct").subscribe;
+  }
+}
+  

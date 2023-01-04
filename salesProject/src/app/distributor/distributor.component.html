@@ -7,7 +7,12 @@
           <button routerLink="/Distributor">Home</button>&nbsp;
           <button routerLink="/Distributor/my-profile">My Profile</button>&nbsp;
           <button routerLink="/Distributor/products">Products</button>&nbsp;
-          <button routerLink="/Distributor/purchase-order">Purchase Orders</button>&nbsp;
+          <!-- <button >Purchase Orders</button> -->
+          <button  mat-button [matMenuTriggerFor]="menu">Purchase Orders</button>&nbsp;
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/Distributor/purchase-order/viewall">View All</button>
+            <button mat-menu-item>Raise New</button>
+          </mat-menu>
           <button routerLink="/Distributor/stock">Stock</button>&nbsp;
           <button routerLink="">Log Out</button>
           

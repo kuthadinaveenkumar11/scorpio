@@ -21,7 +21,6 @@ export class NewStockEntryComponent {
   save(){
     let DataForm=JSON.stringify(this.loginform.value)
     console.log(DataForm);
-    this.data.insert(DataForm);
     window.location.reload();
  
   }

@@ -14,10 +14,16 @@ namespace Projects_Web_Api
     
     public partial class distributerlogin
     {
+        public distributerlogin()
+        {
+            this.Products = new HashSet<Product>();
+        }
+    
         public string username { get; set; }
         public string password { get; set; }
         public string PANNo { get; set; }
     
         public virtual distributer_profile distributer_profile { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

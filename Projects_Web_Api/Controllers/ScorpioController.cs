@@ -31,6 +31,13 @@ namespace Projects_Web_Api.Controllers
             var em = Local.Get_of_Drisributer_Login(username,password);
             return Ok(em);
         }
+        [Route("api/Scorpio/GetProduct")]
+        [HttpGet]
+        public IHttpActionResult GetProduct()
+        {
+            var em = Local.Get_Of_Products();
+            return Ok(em);
+        }
 
     }
 }
