@@ -24,20 +24,68 @@ export class LoginComponent {
 
   }
   onClick(){
-    if(this.loginform.value.dis=="Dist")
+    // if(this.loginform.value.dis=="Dist")
+    // {
+    //  if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+    // {
+    // this.routee.navigate(['Admin']);
+    // }
+    // else{
+    // alert("enter crt");
+    // } 
+    // }
+    // else{
+    // alert("Select the user ")
+    // }
+    console.log(this.loginform.value);
+
+    if(this.loginform.value.dis=="Distributorvalue")
     {
-     if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+      console.log(this.loginform.value.dis);
+
+      if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['Distributor']);
+    }
+    else{
+    alert("enter crt");
+    }
+
+
+    }
+    else if (this.loginform.value.dis=="Authorizervalue"){
+      if(this.loginform.value.Uname=='auth'&&this.loginform.value.Pssword=='12345')
+    {
+    this.routee.navigate(['Authorizer']);
+    }
+    else{
+    alert("enter crt");
+    }
+    }
+    else if (this.loginform.value.dis=="warehousevalue"){
+      if(this.loginform.value.Uname=='ware'&&this.loginform.value.Pssword=='12345')
+      {
+        this.routee.navigate(['Warehouse']);
+      }
+      else{
+        alert("enter crt");
+      }
+    }
+    else if (this.loginform.value.dis=="adminvalue"){
+      if(this.loginform.value.Uname=='admin'&&this.loginform.value.Pssword=='12345')
     {
     this.routee.navigate(['Admin']);
     }
     else{
     alert("enter crt");
-    } 
     }
+    }
+    
     else{
     alert("Select the user ")
     }
   }
+  
   Distributor(){
       this.changing="Enter the Distributor Mail";
       this.passwordchanging="Enter the Distributor Password";
