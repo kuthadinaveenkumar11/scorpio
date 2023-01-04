@@ -21,5 +21,8 @@ namespace Projects_Web_Api
         public string Description { get; set; }
         public byte[] Image { get; set; }
         public int Quantity { get; set; }
+        public string PANNo { get; set; }
+    
+        public virtual distributerlogin distributerlogin { get; set; }
     }
 }

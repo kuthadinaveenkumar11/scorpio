@@ -48,9 +48,6 @@ export class LoginComponent {
    {
      this.routee.navigate(['Distributor']);
 
-    {
-    this.routee.navigate(['Distributor']);
-
     }
     else{
     alert("enter crt");
