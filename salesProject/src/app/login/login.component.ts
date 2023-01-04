@@ -44,8 +44,13 @@ export class LoginComponent {
      
 
       if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
+
    {
      this.routee.navigate(['Distributor']);
+
+    {
+    this.routee.navigate(['Distributor']);
+
     }
     else{
     alert("enter crt");

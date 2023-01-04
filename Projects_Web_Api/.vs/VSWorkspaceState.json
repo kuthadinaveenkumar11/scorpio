@@ -1,16 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< Updated upstream
-    "\\Models",
-    "\\Repos"
-  ],
-=======
     "\\Controllers",
     "\\Models",
     "\\Repos"
   ],
   "SelectedNode": "\\Repos\\InterfaceOfDis.cs",
->>>>>>> Stashed changes
   "PreviewInSolutionExplorer": false
 }

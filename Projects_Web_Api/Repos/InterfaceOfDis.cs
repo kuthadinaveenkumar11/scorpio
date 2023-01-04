@@ -11,6 +11,7 @@ namespace Projects_Web_Api.Repos
     {
         Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(string PAN);
         string Get_of_Drisributer_Login(string Id, string password);
+        string Distributor_Profile_Data( Model_Of_Drisributer_Profile);
 
     }
     public class ClassofDis : InterfaceOfDis
