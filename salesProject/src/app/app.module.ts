@@ -11,11 +11,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import {MatInputModule} from '@angular/material/input';
 import { DistributorModule } from './distributor/distributor.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -25,13 +28,12 @@ import { DistributorModule } from './distributor/distributor.module';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,HttpClientModule,
+    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,MatSelectModule,
+    
     AppRoutingModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,MatMenuModule,MatButtonModule,MatInputModule,
-    DistributorModule,
-    AppRoutingModule,ReactiveFormsModule,FormsModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonModule,MatIconModule,
-    MatMenuModule,MatButtonModule,
-    MatInputModule,MatToolbarModule,
+    ReactiveFormsModule,FormsModule
+    ,MatFormFieldModule,MatCardModule
     
   ],
   providers: [],

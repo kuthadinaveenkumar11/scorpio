@@ -6,7 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { PurchaceOrderComponent } from './purchace-order/purchace-order.component';
 import { StockComponent } from './stock/stock.component';
 
-const routes: Routes = [{path:'',component:DistributorComponent},
+const routes: Routes = [{path:'',component:ProductsComponent},
 {path:'stock',component:StockComponent},
 {path:'products',component:ProductsComponent},
 {path:'my-profile',component:MyProfileComponent},
