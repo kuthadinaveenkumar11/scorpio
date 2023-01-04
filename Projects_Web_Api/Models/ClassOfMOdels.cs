@@ -25,5 +25,15 @@ namespace Projects_Web_Api.Models
 
         public virtual distributer_profile distributer_profile { get; set; }
     }
+     public class Model_of_Product
+    {
+        public string Name { get; set; }
+        public string Product_id { get; set; }
+        public decimal Price { get; set; }
+        public string Type { get; set; }
+        public string Description { get; set; }
+        public byte[] Image { get; set; }
+        public int Quantity { get; set; }
+    }
 
 }

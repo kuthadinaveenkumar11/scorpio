@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiServiceService {
   outputofDisdetails!:any;
+
   constructor(private http:HttpClient) { 
     // this.http.get("https://localhost:44367/api/Scorpio/GetOfDisProfile/{PAN}");
   }
@@ -16,5 +17,8 @@ export class ApiServiceService {
          //  this.outputofDisdetails = null
         // }, 4000)
   });
+  }
+  GetProduct(){
+    this.http.get("https://localhost:44367/api/Scorpio/GetProduct").subscribe;
   }
 }

@@ -27,6 +27,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="scorpioDBModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="PANNo" ColumnName="PANNo" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Product_id" ColumnName="Product_id" />
           <ScalarProperty Name="Price" ColumnName="Price" />

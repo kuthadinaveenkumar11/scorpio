@@ -22,6 +22,7 @@
     <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PANNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="distributer_profile" Relationship="Self.FK__distribut__PANNo__3A81B327" FromRole="distributerlogin" ToRole="distributer_profile" />
+    <NavigationProperty Name="Products" Relationship="scorpioDBModel.FK__Product__PANNo__3D5E1FD2" FromRole="distributerlogin" ToRole="Product" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -34,6 +35,8 @@
     <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="PANNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="distributerlogin" Relationship="scorpioDBModel.FK__Product__PANNo__3D5E1FD2" FromRole="Product" ToRole="distributerlogin" />
   </EntityType>
   <Association Name="FK__distribut__PANNo__3A81B327">
     <End Role="distributer_profile" Type="Self.distributer_profile" Multiplicity="1" />
@@ -55,5 +58,21 @@
       <End Role="distributer_profile" EntitySet="distributer_profiles" />
       <End Role="distributerlogin" EntitySet="distributerlogins" />
     </AssociationSet>
+    <AssociationSet Name="FK__Product__PANNo__3D5E1FD2" Association="scorpioDBModel.FK__Product__PANNo__3D5E1FD2">
+      <End Role="distributerlogin" EntitySet="distributerlogins" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK__Product__PANNo__3D5E1FD2">
+    <End Type="scorpioDBModel.distributerlogin" Role="distributerlogin" Multiplicity="1" />
+    <End Type="scorpioDBModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="distributerlogin">
+        <PropertyRef Name="PANNo" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="PANNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

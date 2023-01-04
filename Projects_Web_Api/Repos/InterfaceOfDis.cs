@@ -10,7 +10,9 @@ namespace Projects_Web_Api.Repos
     public interface InterfaceOfDis
     {
         Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(string PAN);
-        string Get_of_Drisributer_Login(string Id, string password);
+        string Get_of_Drisributer_Login(string username, string password);
+
+        List<Model_of_Product> Get_Of_Products();
 
     }
     public class ClassofDis : InterfaceOfDis
@@ -29,7 +31,7 @@ namespace Projects_Web_Api.Repos
         }
         string InterfaceOfDis.Get_of_Drisributer_Login(string username,string password)
         {
-            var dis = obj.distributerlogins.Where(n => n.username ==username&& n.password==password).FirstOrDefault();
+            var dis = obj.distributerlogins.Where(n => n.username ==username && n.password==password).FirstOrDefault();
             if (dis != null)
             {
                 return "exist";
@@ -37,6 +39,18 @@ namespace Projects_Web_Api.Repos
             return "not";
             
         }
+        List<Model_of_Product> InterfaceOfDis.Get_Of_Products()
+        {
+            List<Model_of_Product> ff = obj.Products.Select(s => new Model_of_Product()
+            {
+                Name=s.Name,
+                Description=s.Description,
+                Image=s.Image
+                
+            }).ToList<Model_of_Product>();
+            return ff;
+        }
+
 
     }
 
