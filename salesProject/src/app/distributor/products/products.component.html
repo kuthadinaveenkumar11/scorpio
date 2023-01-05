@@ -19,7 +19,7 @@
         </button>
     </div> -->
 </header>
-<table>
+<!-- <table>
     <thead>
         <tr>
             <th></th>
@@ -40,7 +40,7 @@
             <td>{{item.Discription}}</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 <div class="container">
     <ng-container *ngFor="let item of productlist">
         <img src={{item.image}}>
@@ -52,4 +52,22 @@
         <!-- <p>{{item.Description}}</p> -->
     </ng-container>
 </div>
-<div class="row"></div>
+<div class="row">
+    <div class="col-sm-3" *ngFor="let item of productlist">
+        <div class="product-item">
+            <img src={{item.image}}>
+            <div class="product-details">
+                <h2>{{item.Name}}</h2>
+                <div class="product-price">
+                    <h3>Price: {{item.Price | currency:'INR'}}</h3>
+                </div>
+                <p>Quantity: {{item.Quantity}}</p>
+                <div class="product-Button">
+                    <button class="btn btn-primary" (click)="DetailsofItem()"> Details </button>    &nbsp;
+                    <button  class="btn"> <mat-icon>add_shopping_cart</mat-icon></button>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

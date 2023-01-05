@@ -14,6 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisregisterComponent } from './disregister/disregister.component';
+import { DetailsofitemComponent } from './detailsofitem/detailsofitem.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DisregisterComponent } from './disregister/disregister.component';
     StockComponent,
     RaiseNewComponent,
     ViewAllComponent,
-    DisregisterComponent
+    DisregisterComponent,
+    DetailsofitemComponent
   ],
   imports: [
     CommonModule,MatMenuModule,MatToolbarModule,MatIconModule,
