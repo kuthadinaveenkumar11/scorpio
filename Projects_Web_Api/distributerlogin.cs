@@ -16,7 +16,7 @@ namespace Projects_Web_Api
     {
         public distributerlogin()
         {
-            this.Products = new HashSet<Product>();
+            this.Distributer_Product = new HashSet<Distributer_Product>();
         }
     
         public string username { get; set; }
@@ -24,6 +24,6 @@ namespace Projects_Web_Api
         public string PANNo { get; set; }
     
         public virtual distributer_profile distributer_profile { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Distributer_Product> Distributer_Product { get; set; }
     }
 }

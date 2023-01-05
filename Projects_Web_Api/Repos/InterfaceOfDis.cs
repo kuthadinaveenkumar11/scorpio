@@ -10,15 +10,9 @@ namespace Projects_Web_Api.Repos
     public interface InterfaceOfDis
     {
         Model_Of_Drisributer_Profile Get_Of_Drisributer_Profile(string PAN);
-<<<<<<< HEAD
         string Get_of_Drisributer_Login(string username, string password);
 
         List<Model_of_Product> Get_Of_Products();
-=======
-        string Get_of_Drisributer_Login(string Id, string password);
-        string Distributor_Profile_Data( Model_Of_Drisributer_Profile);
->>>>>>> 4e1112987b21ef12a4c9b35554c5be1056b8c2ae
-
     }
     public class ClassofDis : InterfaceOfDis
     {
@@ -46,12 +40,16 @@ namespace Projects_Web_Api.Repos
         }
         List<Model_of_Product> InterfaceOfDis.Get_Of_Products()
         {
-            List<Model_of_Product> ff = obj.Products.Select(s => new Model_of_Product()
+            List<Model_of_Product> ff = obj.Wareproducts.Select(s => new Model_of_Product()
             {
                 Name=s.Name,
-                Description=s.Description,
-                Image=s.Image
-                
+                Discription=s.Discription,
+                image=s.image,
+                Product_id=s.Product_id,
+                Price=s.Price,
+                Type=s.Type,
+                Quantity=s.Quantity
+
             }).ToList<Model_of_Product>();
             return ff;
         }

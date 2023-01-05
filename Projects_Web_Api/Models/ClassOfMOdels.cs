@@ -31,9 +31,21 @@ namespace Projects_Web_Api.Models
         public string Product_id { get; set; }
         public decimal Price { get; set; }
         public string Type { get; set; }
-        public string Description { get; set; }
-        public byte[] Image { get; set; }
+        public string Discription { get; set; }
+        public string image { get; set; }
         public int Quantity { get; set; }
+
+    }
+    public class Model_of_Dis_product
+    {
+        public string Name { get; set; }
+        public string Product_id { get; set; }
+        public decimal Price { get; set; }
+        public string Type { get; set; }
+        public string Descripction { get; set; }
+        public string PANno { get; set; }
+        public string Image { get; set; }
+        public Nullable<int> Quantity { get; set; }
     }
 
 }
