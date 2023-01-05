@@ -27,6 +27,7 @@ namespace Projects_Web_Api
     
         public DbSet<distributer_profile> distributer_profiles { get; set; }
         public DbSet<distributerlogin> distributerlogins { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Wareproduct> Wareproducts { get; set; }
+        public DbSet<Distributer_Product> Distributer_Product { get; set; }
     }
 }

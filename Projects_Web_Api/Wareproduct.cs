@@ -12,17 +12,21 @@ namespace Projects_Web_Api
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Wareproduct
     {
+        public Wareproduct()
+        {
+            this.Distributer_Product = new HashSet<Distributer_Product>();
+        }
+    
         public string Name { get; set; }
         public string Product_id { get; set; }
         public decimal Price { get; set; }
         public string Type { get; set; }
-        public string Description { get; set; }
-        public byte[] Image { get; set; }
+        public string Discription { get; set; }
+        public string image { get; set; }
         public int Quantity { get; set; }
-        public string PANNo { get; set; }
     
-        public virtual distributerlogin distributerlogin { get; set; }
+        public virtual ICollection<Distributer_Product> Distributer_Product { get; set; }
     }
 }
