@@ -49,7 +49,6 @@ namespace Projects_Web_Api.Repos
                 Price=s.Price,
                 Type=s.Type,
                 Quantity=s.Quantity
-
             }).ToList<Model_of_Product>();
             return ff;
         }

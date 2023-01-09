@@ -15,6 +15,6 @@ export class ProductsComponent {
 
   }
   DetailsofItem(){
-    this.route.navigate(['detailsofitem']);
+    this.route.navigate(['/Distributor/detailsofitem']);
   }
 }
