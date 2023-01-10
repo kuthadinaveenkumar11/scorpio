@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,6 +15,8 @@ export class LoginComponent {
   passwordchanging:string="Select The User Type";
   disabled=true;
   selected:any;
+
+  distrprof:any;
   
   
   loginform=new FormGroup({
@@ -23,7 +26,9 @@ export class LoginComponent {
 
 
   })
-  constructor(private routee:Router,private api:ApiServiceService) { }
+  constructor(private routee:Router,private api:ApiServiceService,private http:HttpClient) { 
+
+  }
 
   ngOnInit(): void {
 
@@ -37,7 +42,7 @@ export class LoginComponent {
       console.log(this.loginform.value.dis);
       console.log(this.api.outputofDisdetails);
       setTimeout(() => {
-        if(this.api.outputofDisdetails=="exist"){
+        if(this.api.outputofDisdetails!=null){
           this.routee.navigate(['Distributor']);
        }
       }, 1000);
@@ -46,7 +51,7 @@ export class LoginComponent {
       if(this.loginform.value.Uname=='Dis'&&this.loginform.value.Pssword=='12345')
 
    {
-     this.routee.navigate(['Distributor']);
+    //  this.routee.navigate(['Distributor']);
 
     }
     else{
@@ -86,6 +91,10 @@ export class LoginComponent {
     else{
     alert("Select the user ")
     }
+
+
+
+
   }
   Distributor(){
       this.changing="Enter the Distributor Mail";

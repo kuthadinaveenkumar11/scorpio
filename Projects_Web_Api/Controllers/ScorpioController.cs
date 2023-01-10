@@ -22,6 +22,10 @@ namespace Projects_Web_Api.Controllers
         public IHttpActionResult Get_Of_Drisributer_Profile(string PAN)
         {
             var em = Local.Get_Of_Drisributer_Profile(PAN);
+            if (em == null)
+            {
+                return NotFound();
+            }
             return Ok(em);
         }
         [Route("api/Scorpio/GetOfDisProfile/{username}/{password}")]

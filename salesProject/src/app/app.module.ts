@@ -19,6 +19,8 @@ import { DistributorModule } from './distributor/distributor.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
@@ -33,7 +35,7 @@ import {MatCardModule} from '@angular/material/card';
     
     AppRoutingModule,
     ReactiveFormsModule,FormsModule
-    ,MatFormFieldModule,MatCardModule
+    ,MatFormFieldModule,MatCardModule,MatDialogModule
     
   ],
   providers: [],
