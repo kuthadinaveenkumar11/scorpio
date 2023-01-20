@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/api-service.service';
 import { DetailsofitemComponent } from '../detailsofitem/detailsofitem.component';
+import { RaiseNewComponent } from '../purchace-order/raise-new/raise-new.component';
 
 
 @Component({
@@ -17,8 +18,21 @@ export class ProductsComponent {
     this.http.get("https://localhost:44367/api/Scorpio/GetProduct").subscribe(e=>{this.productlist=e;});
 
   }
-  DetailsofItem(){
-    this.dialog.open(DetailsofitemComponent);
-    // this.route.navigate(['/Distributor/detailsofitem']);
+  DetailsofItem(item:any){
+    this.dialog.open(DetailsofitemComponent ,{
+      height : '98%',
+      width : '48%',
+      data : item,
+      
+    });
   }
+  onclickRaiseOrder(item:any){
+    this.dialog.open(RaiseNewComponent, {
+      height : '98%',
+      width : '48%',
+      data :  item
+    });
+  }
+    // this.route.navigate(['/Distributor/detailsofitem']);
+  
 }

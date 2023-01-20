@@ -16,7 +16,14 @@ export class ApiServiceService {
         // setTimeout(() => {
 
   GetProduct(){
-    this.http.get("https://localhost:44367/api/Scorpio/GetProduct").subscribe;
+    this.http.get("https://localhost:44367/api/Scorpio/GetProduct").subscribe();
+  }
+  PostStatusofProduct(json:any){
+   return this.http.post("https://localhost:44367/api/Scorpio/Productstatus",json);
+  }
+
+  GetofDisProduct(){
+    return this.http.get("https://localhost:44367/api/Scorpio/DisGetOrderProduct");
   }
 }
   

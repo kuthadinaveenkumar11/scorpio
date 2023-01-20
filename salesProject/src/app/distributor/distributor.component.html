@@ -1,20 +1,15 @@
-
-  <p>
+<p>
     <mat-toolbar color="primary">
       <span>Distributor Home Page</span>
       <span class="example-spacer"></span>
         <div class="example-button-row">
-          <button routerLink="/Distributor">Home</button>&nbsp;
-          <button routerLink="/Distributor/my-profile">My Profile</button>&nbsp;
-          <button routerLink="/Distributor/products">Products</button>&nbsp;
+          <!-- <button  mat-button routerLink="/Distributor">Home</button>&nbsp; -->
+          <button mat-button routerLink="/Distributor/my-profile">My Profile</button>&nbsp;
+          <button mat-button routerLink="/Distributor/products">Products</button>&nbsp;
           <!-- <button >Purchase Orders</button> -->
-          <button  mat-button [matMenuTriggerFor]="menu">Purchase Orders</button>&nbsp;
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/Distributor/purchase-order/viewall">View All</button>
-            <button mat-menu-item routerLink="/Distributor/purchase-order/raise">Raise New</button>
-          </mat-menu>
-          <button routerLink="/Distributor/stock">Stock</button>&nbsp;
-          <button routerLink="">Log Out</button>
+          <button  mat-button  routerLink="/Distributor/purchase-order">Purchase Orders</button>&nbsp;
+          <button mat-button routerLink="/Distributor/stock">Stock</button>&nbsp;
+          <button mat-button routerLink=""><mat-icon  id="logout-btn">logout</mat-icon></button>
           
         </div>
     </mat-toolbar>

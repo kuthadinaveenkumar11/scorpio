@@ -12,18 +12,15 @@ namespace Projects_Web_Api
     using System;
     using System.Collections.Generic;
     
-    public partial class Distributer_Product
+    public partial class Status_Table
     {
-        public string Name { get; set; }
-        public string Product_id { get; set; }
-        public decimal Price { get; set; }
+        public System.DateTime OrderPlacedDate { get; set; }
+        public int OrderID { get; set; }
+        public int ProductID { get; set; }
         public string Type { get; set; }
-        public string Descripction { get; set; }
-        public string PANno { get; set; }
-        public string Image { get; set; }
+        public string ProductName { get; set; }
         public int Quantity { get; set; }
-    
-        public virtual distributerlogin distributerlogin { get; set; }
-        public virtual Wareproduct Wareproduct { get; set; }
+        public decimal TotalCost { get; set; }
+        public string Status { get; set; }
     }
 }

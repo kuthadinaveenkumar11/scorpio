@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
@@ -35,8 +38,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     
     AppRoutingModule,
     ReactiveFormsModule,FormsModule
-    ,MatFormFieldModule,MatCardModule,MatDialogModule
-    
+    ,MatFormFieldModule,MatCardModule,MatDialogModule,
+    MatNativeDateModule
+    ,MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

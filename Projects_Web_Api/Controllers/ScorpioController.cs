@@ -1,4 +1,5 @@
-﻿using Projects_Web_Api.Repos;
+﻿using Projects_Web_Api.Models;
+using Projects_Web_Api.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,27 @@ namespace Projects_Web_Api.Controllers
         public IHttpActionResult GetProduct()
         {
             var em = Local.Get_Of_Products();
+            return Ok(em);
+        }
+        [Route("api/Scorpio/DisGetProduct")]
+        [HttpGet]
+        public IHttpActionResult DisGetProduct()
+        {
+            var em = Local.Dis_Products();
+            return Ok(em);
+        }
+        [Route("api/Scorpio/Productstatus")]
+        [HttpPost]
+        public IHttpActionResult Orderstatus(Model_of_Status models)
+        {
+            var em = Local.Orderstatus(models);
+            return Ok(em);
+        }
+        [Route("api/Scorpio/DisGetOrderProduct")]
+        [HttpGet]
+        public IHttpActionResult DisGetOrderroduct()
+        {
+            var em = Local.Get_Of_OrderProducts();
             return Ok(em);
         }
 

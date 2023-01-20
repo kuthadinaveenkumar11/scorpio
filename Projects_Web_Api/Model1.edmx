@@ -44,6 +44,19 @@ warning 6002: The table/view 'scorpioDB.dbo.Distributer_Product' does not have a
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PANNo" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Status_Table">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderPlacedDate" Type="date" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="TotalCost" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Wareproduct">
           <Key>
             <PropertyRef Name="Product_id" />
@@ -95,6 +108,7 @@ warning 6002: The table/view 'scorpioDB.dbo.Distributer_Product' does not have a
         <EntityContainer Name="scorpioDBModelStoreContainer">
           <EntitySet Name="distributer profile" EntityType="Self.distributer profile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="distributerlogin" EntityType="Self.distributerlogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status_Table" EntityType="Self.Status_Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Wareproduct" EntityType="Self.Wareproduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Distributer_Product" EntityType="Self.Distributer_Product" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -178,6 +192,7 @@ FROM [dbo].[Distributer_Product] AS [Distributer_Product]</DefiningQuery>
             <End Role="Wareproduct" EntitySet="Wareproducts" />
             <End Role="Distributer_Product" EntitySet="Distributer_Product" />
           </AssociationSet>
+          <EntitySet Name="Status_Table" EntityType="scorpioDBModel.Status_Table" />
         </EntityContainer>
         <EntityType Name="Wareproduct">
           <Key>
@@ -234,6 +249,19 @@ FROM [dbo].[Distributer_Product] AS [Distributer_Product]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Status_Table">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderPlacedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="TotalCost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -287,6 +315,20 @@ FROM [dbo].[Distributer_Product] AS [Distributer_Product]</DefiningQuery>
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Product_id" ColumnName="Product_id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status_Table">
+            <EntityTypeMapping TypeName="scorpioDBModel.Status_Table">
+              <MappingFragment StoreEntitySet="Status_Table">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderPlacedDate" ColumnName="OrderPlacedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

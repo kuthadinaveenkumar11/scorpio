@@ -29,5 +29,6 @@ namespace Projects_Web_Api
         public DbSet<distributerlogin> distributerlogins { get; set; }
         public DbSet<Wareproduct> Wareproducts { get; set; }
         public DbSet<Distributer_Product> Distributer_Product { get; set; }
+        public DbSet<Status_Table> Status_Table { get; set; }
     }
 }

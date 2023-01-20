@@ -45,7 +45,20 @@ namespace Projects_Web_Api.Models
         public string Descripction { get; set; }
         public string PANno { get; set; }
         public string Image { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        public int Quantity { get; set; }
+
+
+    }
+    public class Model_of_Status
+    {
+        public System.DateTime OrderPlacedDate { get; set; }
+        public int OrderID { get; set; }
+        public int ProductID { get; set; }
+        public string Type { get; set; }
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+        public decimal TotalCost { get; set; }
+        public string Status { get; set; }
     }
 
 }

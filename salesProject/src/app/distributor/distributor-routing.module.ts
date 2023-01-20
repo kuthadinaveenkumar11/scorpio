@@ -6,7 +6,6 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ProductsComponent } from './products/products.component';
 import { PurchaceOrderComponent } from './purchace-order/purchace-order.component';
 import { RaiseNewComponent } from './purchace-order/raise-new/raise-new.component';
-import { ViewAllComponent } from './purchace-order/view-all/view-all.component';
 import { StockComponent } from './stock/stock.component';
 
 const routes: Routes = [{path:'',component:ProductsComponent},
@@ -14,9 +13,6 @@ const routes: Routes = [{path:'',component:ProductsComponent},
 {path:'products',component:ProductsComponent},
 {path:'my-profile',component:MyProfileComponent},
 {path:'purchase-order',component:PurchaceOrderComponent},
-{
-  path:'purchase-order/viewall',component:ViewAllComponent
-},
 {path:'purchase-order/raise',component:RaiseNewComponent}
 
 
